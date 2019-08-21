@@ -1,0 +1,54 @@
+.filter__icon--highlight {
+    border: 1px solid blue;
+}
+
+.facet-search-filter {
+    display: flex;
+    margin: 20px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.facet-value {
+    cursor: pointer;
+    margin: 10px;
+    transition: border-bottom 0.6s linear;
+}
+
+div.active-facet{
+    background: gray;
+}
+	
+.facet-value:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+}
+
+.facet-value:hover:after {
+    width: 100%;
+}
+
+.bottom-remove-filter {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.bottom-remove-filter button {
+    background-color: #FF4136 !important;
+    color: #f8f8ff;
+    border: none;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 5px !important;
+    padding: 1rem 3rem;
+    cursor: pointer;
+}
+
+.bottom-remove-filter button:hover {
+    background-color: rgb(216, 96, 89) !important;
+    color: #f8f8ff;
+    
+}

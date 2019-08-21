@@ -142,6 +142,10 @@
     <None Include="Views\web.config" />
     <Content Include="App_Config\Include\Feature\Sitecore.Feature.IconFilter.config" />
     <None Include="packages.config" />
+    <Content Include="Theme\Css\custom-component-icon-result-filter.css" />
+    <Content Include="Theme\Css\icon.css" />
+    <Content Include="Theme\Css\rotating-card.css" />
+    <Content Include="Theme\Scripts\custom-component-icon-result-filter.js" />
     <Content Include="Views\IconFilter\IconFilter.cshtml" />
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
     <None Include="Web.Debug.config">
