@@ -1,0 +1,36 @@
+﻿@using Sitecore.Web
+@using Sitecore.XA.Feature.Search
+@using Sitecore.XA.Foundation.MarkupDecorator.Extensions
+@using Sitecore.XA.Foundation.SitecoreExtensions.Extensions
+
+@model Sitecore.Feature.IconFilter.Model.IconFilterRenderingModel
+
+@if (Model.IsEdit || Model.FacetItemName != null)
+{
+<div @Html.Sxa().Component(Model.Rendering.RenderingCssClass ?? "facet-icon", Model.Attributes).Decorate("class", "facet-component") data-properties='@Model.JsonDataProperties'>
+    <div class="component-content">
+
+        @if (Model.DataSourceItem == null)
+        {
+            @Model.MessageIsEmpty
+        }
+        else if (Model.FacetItemName == null)
+        {
+            @Model.MessageFacetIsEmpty
+        }
+        else
+        {
+            <div class="contentContainer">
+                @Model.Html
+            </div>
+            { Html.RenderPartial("FacetRemoveFilterButton", Model); }
+            if (!String.IsNullOrWhiteSpace(Model.FilterButtonLabel) || Model.MultiSelection)
+            {
+                <div class="bottom-filter-button">
+                    <input type="button" class="filterButton" value="@(!string.IsNullOrWhiteSpace(Model.FilterButtonLabel) ? Model.FilterButtonLabel : Sitecore.Globalization.Translate.Text(Texts.Filter))" />
+                </div>
+            }
+        }
+    </div>
+</div>
+}
