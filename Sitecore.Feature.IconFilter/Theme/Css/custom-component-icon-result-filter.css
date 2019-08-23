@@ -1,54 +1,85 @@
 .filter__icon--highlight {
-    border: 1px solid blue;
+  border: 1px solid blue;
 }
 
 .facet-search-filter {
-    display: flex;
-    margin: 20px;
-    text-align: center;
-    font-size: 1.5rem;
+  display: flex;
+  margin: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+  justify-content: center;
 }
 
 .facet-value {
-    cursor: pointer;
-    margin: 10px;
-    transition: border-bottom 0.6s linear;
+  cursor: pointer;
+  margin: 10px;
+  transition: border-bottom 0.6s linear;
+  flex: 1 1 0;
 }
 
-div.active-facet{
-    background: gray;
+.active-facet {
+  background: gray;
 }
-	
+
 .facet-value:after {
-    content: '';
-    display: block;
-    width: 0;
-    height: 2px;
-    background: #000;
-    transition: width .3s;
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #000;
+  transition: width 0.3s;
 }
 
 .facet-value:hover:after {
-    width: 100%;
+  width: 100%;
 }
 
 .bottom-remove-filter {
-    display: flex;
-    justify-content: flex-end;
+  display: flex;
+  justify-content: flex-end;
 }
 
 .bottom-remove-filter button {
-    background-color: #FF4136 !important;
-    color: #f8f8ff;
-    border: none;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
-    border-radius: 5px !important;
-    padding: 1rem 3rem;
-    cursor: pointer;
+  background-color: #ff4136 !important;
+  color: #f8f8ff;
+  border: none;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+  border-radius: 5px !important;
+  padding: 1rem 3rem;
+  cursor: pointer;
+  width: 100%;
 }
 
 .bottom-remove-filter button:hover {
-    background-color: rgb(216, 96, 89) !important;
-    color: #f8f8ff;
-    
+  background-color: rgb(216, 96, 89) !important;
+  color: #f8f8ff;
+}
+
+.text-only {
+  height: 98px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.intro {
+    font-size: 1.5rem;
+}
+
+/*////////////////// media queries ///////////////// */
+
+@media (max-width: 380px) {
+  .facet-search-filter {
+    flex-direction: column;
+    margin: 0;
+  }
+
+  .text-only {
+    height: auto;
+    padding: 1rem 3rem;
+  }
+
+  .facet-value {
+    margin: 10px 0;
+  }
 }

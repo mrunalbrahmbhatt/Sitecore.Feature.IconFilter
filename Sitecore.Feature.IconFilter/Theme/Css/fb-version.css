@@ -1,0 +1,95 @@
+/*/////////////////////// fb version styles /////////////////////////*/
+
+.hero-banner img {
+  z-index: 0;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.profile__image {
+  display: inline;
+}
+
+.profile__image > img {
+  margin: -90px 10px 0px 50px;
+  z-index: 9;
+  width: 70% !important;
+  height: 52%;
+  border: 1px solid #16161d;
+}
+
+.profile__info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+}
+
+.profile__info > div[class^="field-"] {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 0 1rem;
+  flex: 1;
+}
+
+.profile__info > div[class^="field-"] > span {
+  padding: 1rem 0.3rem;
+  background-color: #3ab4b9;
+  border-radius: 5px;
+  color: #151a1a;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.profile__publisher {
+  display: flex;
+  justify-content: center;
+}
+
+.profile__publisher img {
+  width: 200px;
+  margin-top: 1.5rem;
+}
+
+/*//////////////// media queries ///////////////////////*/
+
+@media (max-width: 768px) {
+  .profile__text > h1 {
+    font-weight: 700;
+    font-size: 16px;
+  }
+
+  .profile__image > img {
+    margin: -45px 10px 0px 25px;
+    z-index: 9;
+    width: 200px !important;
+    height: 160px;
+    object-position: 0 0;
+  }
+  .profile__publisher {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .profile__publisher img {
+    width: 100px;
+    margin-top: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .profile__info {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    padding-bottom: 1rem;
+  }
+
+  .profile__info > div[class^="field-"] {
+    padding: 1rem;
+  }
+
+  .profile__publisher {
+    justify-content: center;
+  }
+
+  .content * {
+    max-width: none;
+  }
+}
