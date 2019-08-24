@@ -15,3 +15,6 @@ This module is developed using Sitecore 9.2 and SXA 1.9. Also some clean is pend
 
 ## Support
 You all are welcome to extend or fix this feature if required, OR you can drop me an email at it.mrunal@gmail.com to report an issue
+
+## Documentation
+[Wiki](https://github.com/mrunalbrahmbhatt/Sitecore.Feature.IconFilter/wiki)
